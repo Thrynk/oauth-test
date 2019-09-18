@@ -26,7 +26,7 @@ class App extends Component {
             mode: 'cors',
             cache: 'default'
         };
-        fetch('http://localhost:4000/api/v1/auth/facebook', options).then(r => {
+        fetch('https://ff804a98.ngrok.io/api/v1/auth/facebook', options).then(r => {
             const token = r.headers.get('x-auth-token');
             r.json().then(user => {
                 if (token) {
